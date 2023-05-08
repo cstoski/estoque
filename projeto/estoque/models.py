@@ -12,7 +12,7 @@ MOVIMENTO = (
 class Estoque (TimeStampedModel):
     funcionario = models.ForeignKey(User, on_delete=models.CASCADE)
     nf = models.PositiveIntegerField('nota fiscal', null=True, blank=True)
-    moviemento = models.CharField(max_length=1, choices=MOVIMENTO)
+    movimento = models.CharField(max_length=1, choices=MOVIMENTO)
 
     class Meta:
         ordering = ('-created', )
